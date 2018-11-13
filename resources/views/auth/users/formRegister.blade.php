@@ -16,20 +16,20 @@
 			  <div class="clear"></div>
 		</div>
 		<div class="form-right-to-w3ls">
-			<input type="text" name="phone number" placeholder="Phone Number" required="">
+			<input type="text" name="phonenumber" placeholder="Phone Number" required="">
 			  <div class="clear"></div>
 		</div>
 	</div>
 	<div class="main">
  		<div class="form-left-to-w3l">
-				<select class="form-control">
+				<select name="gender" class="form-control">
 				<option value="">Gender</option>
-					<option>Male</option>
-					<option>Female</option>
+					<option value="male">Male</option>
+					<option value="female">Female</option>
 				</select>
 		</div>
 			<div class="form-right-to-w3ls">
-		    <input  id="datepicker1" name="dateofbirth" type="date" placeholder="Date of Birth" required="">
+		    <input  id="datepicker1" name="birthday" type="date"  placeholder="Date of Birth" required="">
 			<div class="clearfix"></div>
 		</div>
 	</div>
@@ -38,10 +38,9 @@
 		<div class="clear"></div>
 	</div>
 	<div class="form-right-to-w3ls">
-			<select class="form-control buttom">
-				<option value="">
-				Select City</option>
-					<option value="category2">Da Nang</option>
+			<select name="city" class="form-control buttom">
+				<option value="">Select City</option>
+					<option value="Da Nang">Da Nang</option>
 			</select>
            <div class="clear"></div>
 	</div>

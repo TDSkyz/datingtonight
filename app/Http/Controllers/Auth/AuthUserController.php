@@ -28,6 +28,26 @@ class AuthUserController extends Controller
     	}
     }
 
+    public function signUp(Request $request){
+        $username = $request->username;
+        $password = $request->password;
+        $email = $request->email;
+        $phonenumber= $request->phonenumber;
+        $gender = $request->gender;
+        $birthday = $request->birthday;
+        $fullname = $request->fullname;
+        $city = $request->city;
+        $facebook = $request->facebook;
+        if($this->mUser->checkUserExist($username)){
+            return redirect()->route('auth.users.default')->with('alert','Username has been taken');
+        }
+        if($this->mUser->addNewUser($username,$password,$email,$phonenumber,$gender,$birthday,$fullname,$city,$facebook)){
+            return redirect()->route('auth.users.default')->with('alert','Register Successful');
+        } else {
+            return redirect()->route('auth.users.default')->with('alert','Register Failed');
+        }
+    }
+
     public function logOut(Request $request){
     	$request->session()->flush();
     	return redirect()->route('auth.users.default');
