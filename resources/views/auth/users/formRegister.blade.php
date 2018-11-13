@@ -1,4 +1,5 @@
-<form action="#" method="post">
+<form action="{{ route('auth.users.signup') }}" method="post">
+	{{ csrf_field() }}
 	<div class="main">
 		<div class="form-left-to-w3l">
 			<input type="text" name="username" placeholder="Username" required="">

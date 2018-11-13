@@ -798,6 +798,12 @@ Route::namespace('Auth')->group(function(){
 			'as' => 'auth.users.default'
 		]);
 	});
+
+    Route::post('/user/signup',[
+        'uses' => 'AuthUserController@signUp',
+        'as' => 'auth.users.signup'
+    ]);
+
 	Route::get('/user/log-out',[
 		'uses' => 'AuthUserController@logOut',
 		'as' => 'auth.user.logout'
